@@ -37,7 +37,7 @@ add_routes(
 llm1 = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7)
 
 # OpenAI chat model
-llm2 = ollama.Ollama(model="llama2", temperature=0.7)
+llm2 = ollama.Ollama(model="gemma3", temperature=0.7)
 
 
 # Prompt template
@@ -60,7 +60,7 @@ add_routes(
 add_routes(
     app,
     llm2| chat_prompt2,
-    path="/chat/ollama",
+    path="/chat/gemma3",
 )
 
 if __name__ == "__main__":

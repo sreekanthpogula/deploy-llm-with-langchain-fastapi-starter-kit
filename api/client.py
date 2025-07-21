@@ -14,9 +14,9 @@ def get_openai_response(question):
         return f"Error: {response.status_code} - {response.text}"
 
 
-# Function to send a GET request to the Ollama chatbot API
-def get_ollama_response(question):
-    url = "http://localhost:8000/chat/ollama"
+# Function to send a GET request to the Gemma 3 chatbot API
+def get_gemma3_response(question):
+    url = "http://localhost:8000/chat/gemma3"
     json_data = {"question": question}
     headers = {"Content-Type": "application/json"}
 
@@ -47,16 +47,16 @@ if st.button("Get OpenAI Response"):
         st.error("Please enter a question.")
 
 # Input text for the question
-input_text2 = st.text_input("Enter your question for Ollama:", "")
+input_text2 = st.text_input("Enter your question for Gemma 3:", "")
 
 # Display instructions
 st.info("Click the buttons below to get responses from the respective chatbots.")
 
-# Button to get response from Ollama
-if st.button("Get Ollama Response"):
+# Button to get response from Gemma 3
+if st.button("Get Gemma 3 Response"):
     if input_text2:
-        with st.spinner("Getting response from Ollama..."):
-            response = get_ollama_response(input_text2)
-            st.success(f"Ollama Response: {response}")
+        with st.spinner("Getting response from Gemma 3..."):
+            response = get_gemma3_response(input_text2)
+            st.success(f"Gemma 3 Response: {response}")
     else:
         st.error("Please enter a question.")
