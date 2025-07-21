@@ -8,3 +8,8 @@ fastapi
 uvicorn
 sse_starlette
 pydantic == 2.6.4
+bs4
+pypdf
+faiss-cpu
+chromadb
+lancedb
