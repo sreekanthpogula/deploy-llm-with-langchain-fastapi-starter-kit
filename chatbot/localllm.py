@@ -27,11 +27,11 @@ chat_prompt = ChatPromptTemplate.from_messages([
 ])
 
 # Streamlit app configuration
-st.title("LLM Chatbot Demo With LangChain and Ollama API")
+st.title("LLM Chatbot Demo With LangChain and Gemma 3 API")
 input_text = st.text_input("Enter the question you want to ask:", "")
 
 # OpenAI chat model
-llm = ollama.Ollama(model="llama2", temperature=0.7)
+llm = ollama.Ollama(model="gemma3", temperature=0.7)
 # Output parser
 output_parser = StrOutputParser()
 chain = chat_prompt | llm | output_parser
