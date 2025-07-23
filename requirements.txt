@@ -17,3 +17,5 @@ arxiv
 wikipedia
 langchainhub
 langchain-groq
+sentence-transformers
+huggingface-hub
