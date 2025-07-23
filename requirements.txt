@@ -1,5 +1,5 @@
 langchain_openai
-langchain_core
+langchain-core
 langchain_community
 python-dotenv
 streamlit
@@ -13,3 +13,7 @@ pypdf
 faiss-cpu
 chromadb
 lancedb
+arxiv
+wikipedia
+langchainhub
+langchain-groq
