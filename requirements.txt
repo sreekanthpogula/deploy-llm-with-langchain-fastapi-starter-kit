@@ -19,3 +19,4 @@ langchainhub
 langchain-groq
 sentence-transformers
 huggingface-hub
+langchain-objectbox
